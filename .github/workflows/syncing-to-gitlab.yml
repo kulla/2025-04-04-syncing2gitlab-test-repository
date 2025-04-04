@@ -24,4 +24,4 @@ jobs:
           git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/stephan_kulla/${REPO_NAME}.git
 
       - name: Push to GitLab
-        run: git push gitlab ${{ github.ref_name }}
+        run: git push -f gitlab ${{ github.ref_name }}
